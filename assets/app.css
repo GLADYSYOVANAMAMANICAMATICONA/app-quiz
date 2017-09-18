@@ -2,20 +2,32 @@ body{
 background-color: black;
 }
 
-.container-img .img-cont{
-    width: 100%;
-    height: 30%;
+.img-cont img{
+    width: 85%;
+    height: 32vh;
+
 }
 
-.img1{
-    width: 100%;
-}
 #container-b{
     margin: auto;
     width: 80%;
     height: 80%;
 }
 
+.title-q{
+    font-family: 'IM Fell Great Primer', serif;
+    color: blue;
+        -webkit-animation-name:parpadeo;
+             -webkit-animation-duration: 5s;
+             -webkit-animation-timing-function: linear;
+             -webkit-animation-iteration-count: infinite;
+        }
+        @keyframes parpadeo {  
+                      0% { opacity: 1.0; }
+                      50% { opacity: 0.0; }
+                      100% { opacity: 1.0; }
+                    }
+   
 .fa-facebook{
     color: blue;
 }
@@ -29,5 +41,5 @@ background-color: black;
 }
 
 .iconos{
-    margin-top: 20%;
+    margin-top: 15%;
 }
