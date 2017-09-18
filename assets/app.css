@@ -4,23 +4,7 @@
     height: 30%;
 }
 
-.img1{
-    z-index: 10;
-    width: 100%;
-    
-}
 
-.img2{
-    z-index: 100;
-    width: 100%;
-    
-}
-
-.img3{
-    z-index: 1000;
-    width: 100%;
-    
-}
 
 .fa-facebook{
     color: blue;

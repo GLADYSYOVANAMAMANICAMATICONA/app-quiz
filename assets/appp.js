@@ -1,35 +1,29 @@
 function submitQuiz() {
     console.log('submitted');
 
-    // get each answer score
     function answerScore(qName) {
         let radiosNo = document.getElementsByName(qName);
 
         for (let i = 0, length = radiosNo.length; i < length; i++) {
             if (radiosNo[i].checked) {
-                // do something with radiosNo
                 let answerValue = Number(radiosNo[i].value);
             }
         }
-        // change NaNs to zero
         if (isNaN(answerValue)) {
             answerValue = 0;
         }
         return answerValue;
     }
 
-    // calc score with answerScore function
     let calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3'));
-    console.log("CalcScore: " + calcScore); // it works!
+    console.log("CalcScore: " + calcScore);
 
-    // function to return correct answer string
     function correctAnswer(correctStringNo, qNumber) {
-        console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
+        console.log("qNumber: " + qNumber); 
         return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
             (document.getElementById(correctStringNo).innerHTML) + "</strong>");
     }
 
-    // print correct answers only if wrong (calls correctAnswer function)
     if (answerScore('q1') === 0) {
         document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
     }
@@ -40,7 +34,6 @@ function submitQuiz() {
         document.getElementById('correctAnswer3').innerHTML = correctAnswer('correctString3', 3);
     }
 
-    // calculate "possible score" integer
     let questionCountArray = document.getElementsByClassName('question');
 
     let questionCounter = 0;
@@ -48,9 +41,7 @@ function submitQuiz() {
         questionCounter++;
     }
 
-    // show score as "score/possible score"
     let showScore = "Your Score: " + calcScore + "/" + questionCounter;
-    // if 4/4, "perfect score!"
     if (calcScore === questionCounter) {
         showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
     };
@@ -81,17 +72,6 @@ function mostrarImg() {
         $(".img-cont").append(`<img class="img1 img-responsive" src="${img[nro-1]}" alt="">`);
     });
 }
-/*
-$(document).ready(function(){
-        $("ocultar2").click(function(){
-                $(".img2").append();
-        });
-});
 
-$(document).ready(function(){
-    $("ocultar3").click(function(){
-            $(".img3").append();
-    });
-});*/
 
 
