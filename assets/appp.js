@@ -19,7 +19,7 @@ function submitQuiz() {
     console.log("CalcScore: " + calcScore);
 
     function correctAnswer(correctStringNo, qNumber) {
-        console.log("qNumber: " + qNumber); 
+        console.log("qNumber: " + qNumber);
         return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
             (document.getElementById(correctStringNo).innerHTML) + "</strong>");
     }
@@ -55,10 +55,6 @@ $(document).ready(function () {
     });
 
 });
-
-
-
-
 //////////////////////////////////////////7777
 var img = ["assets/img/img.jpg", "assets/img/img1.png", "assets/img/img2.png"]
 
@@ -69,7 +65,7 @@ function mostrarImg() {
         console.log(event);
         $(".img-cont").empty();
         let nro = event.target.id;
-        $(".img-cont").append(`<img class="img1 img-responsive" src="${img[nro-1]}" alt="">`);
+        $(".img-cont").append(`<img class="img1 img-responsive" src="${img[nro - 1]}" alt="">`);
     });
 }
 
