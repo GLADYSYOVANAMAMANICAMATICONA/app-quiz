@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 
 //////////////////////////////////////////7777
-var img = ["assets/img/img.png", "assets/img/img1.png", "assets/img/img2.png"]
+var img = ["assets/img/img.jpg", "assets/img/img1.png", "assets/img/img2.png"]
 
 $(document).ready(mostrarImg);
 function mostrarImg() {
