@@ -10,10 +10,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="assets/app.css">
-
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/app.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -21,9 +21,12 @@
 </head>
 
 <body>
+    <div class="navbar-header">
+        <h1 class="title-q">QUIZ</h1>
+    </div>
     <div id="container-b">
         <center>
-            <h1 class="title-q">QUIZ</h1>
+
             <center>
                 <section class="img-cont">
                     <img class="img1 img-responsive" src="assets/img/prog.jpg" alt="">
@@ -57,28 +60,28 @@
                     </li>
                 </ul>
             </div>
+            <center>
+                <div class="submitter">
+                    <input class="quizSubmit btn btn-primary" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+                </div>
+
+                <div class="quizAnswers" id="correctAnswer1"></div>
+                <div class="quizAnswers" id="correctAnswer2"></div>
+                <div class="quizAnswers" id="correctAnswer3"></div>
+                <div class="quizAnswers" id="correctAnswer4"></div>
+
+                <div>
+                    <h2 class="quizScore" id="userScore"></h2>
+                </div>
+            </center>
+            <div class="iconos">
+                <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+
+            </div>
     </div>
-    <center>
-        <div class="submitter">
-            <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
-        </div>
 
-        <div class="iconos">
-            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
-
-        </div>
-
-        <div class="quizAnswers" id="correctAnswer1"></div>
-        <div class="quizAnswers" id="correctAnswer2"></div>
-        <div class="quizAnswers" id="correctAnswer3"></div>
-        <div class="quizAnswers" id="correctAnswer4"></div>
-
-        <div>
-            <h2 class="quizScore" id="userScore"></h2>
-        </div>
-    </center>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- <script src="assets/app.js"></script> -->
